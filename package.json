@@ -1,0 +1,79 @@
+{
+  "name": "promptspec",
+  "displayName": "Flint Prompts",
+  "description": "Instantly insert structured prompt templates in any file — type a prefix and get your template.",
+  "version": "0.0.5",
+  "publisher": "kamalpulaparthi",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Snippets",
+    "Other"
+  ],
+  "keywords": ["prompt", "templates", "ai", "snippets", "flint"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamalpulaparthi/promptspec"
+  },
+  "activationEvents": ["onStartupFinished"],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "flint.ai",       "title": "Flint: General AI Prompt" },
+      { "command": "flint.dbg",      "title": "Flint: Debug" },
+      { "command": "flint.feat",     "title": "Flint: Feature" },
+      { "command": "flint.review",   "title": "Flint: Code Review" },
+      { "command": "flint.arch",     "title": "Flint: Architecture" },
+      { "command": "flint.api",      "title": "Flint: API Design" },
+      { "command": "flint.refactor", "title": "Flint: Refactor" },
+      { "command": "flint.sec",      "title": "Flint: Security Review" },
+      { "command": "flint.perf",     "title": "Flint: Performance" },
+      { "command": "flint.agent",    "title": "Flint: AI Agent" },
+      { "command": "flint.learn",    "title": "Flint: Learning" },
+      { "command": "flint.decision", "title": "Flint: Decision" },
+      { "command": "flint.rca",      "title": "Flint: Root Cause Analysis" },
+      { "command": "flint.sys",      "title": "Flint: System Design" },
+      { "command": "flint.research", "title": "Flint: Research" },
+      { "command": "flint.improve",  "title": "Flint: Improve Prompt" },
+      { "command": "flint.biz",      "title": "Flint: Business Logic" },
+      { "command": "flint.ui",       "title": "Flint: UI/UX" },
+      { "command": "flint.deploy",   "title": "Flint: Deployment Debug" },
+      { "command": "flint.context",  "title": "Flint: Context Engineering" }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "functional-test": "node test.js",
+    "package:vsix": "npx @vscode/vsce package --no-dependencies --allow-missing-repository",
+    "publish": "npx @vscode/vsce publish --no-dependencies --allow-missing-repository"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "typescript-eslint": "^8.61.1",
+    "eslint": "^10.5.0",
+    "esbuild": "^0.28.1",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^6.0.3",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}

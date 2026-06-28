@@ -1,0 +1,24 @@
+# Build outputs
+out/
+dist/
+*.vsix
+
+# Dependencies
+node_modules/
+
+# VS Code test infrastructure
+.vscode-test/
+.vscode-test.mjs
+.test-results/
+.tmp-ud/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Env
+.env
+.env.*
