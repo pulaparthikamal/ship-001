@@ -1,95 +1,88 @@
 # Flint Prompts
 
-**Flint** instantly inserts structured, headings-only prompt templates into your editor. No fluff, no configuration, just fast prompt structures.
+**Flint** instantly inserts structured, headings-only prompt templates into your editor. No fluff, no token bloat, just lightning-fast prompt structures.
 
 ---
 
 ## ⚡ The Problem & What Flint Solves
 
-### The Problem:
-* **Token Bloat**: Copied prompt templates are often loaded with verbose descriptions, instructions, and examples that waste your LLM's context window and increase token cost.
-* **Repetition**: Writing structured prompt sections (Goal, Constraints, Context, Output) manually every single time is slow.
-
-### What Flint Solves:
-* **Token Savings**: Inserts clean, minimal, headings-only structures. You only feed the AI what's actually relevant to your task.
-* **Context Preservation**: Keeps your LLM focused on your actual code/problem, not the template's guidelines.
+* **Unstructured Prompts**: LLMs output low-quality results without a clear structure (Goal, Context, Edge Cases, Output).
+* **Token Waste**: Copy-pasting verbose prompt templates wastes hundreds of input tokens on explanation boilerplate.
+* **Flint's Solution**: Flint inserts headings-only prompt skeletons that use minimum tokens and force the AI to focus entirely on your code context.
 
 ---
 
 ## 🚀 How to Use (Simple & Fast)
 
-There are two correct ways to use Flint in **any file**:
+Flint works in **any file type** (`.md`, `.txt`, `.ts`, `.py`, etc.) with two quick methods:
 
-### Method 1: The Slash Command `/` (Recommended)
-1. Open any file in your editor (e.g. `notes.md`, `test.py`).
-2. Type `/` followed by the template prefix (e.g., `/feat` or `/dbg`).
-3. Press **Enter** or **Tab** to insert.
+### Method 1: Autocomplete Slash Commands (Recommended)
+1. Open any file.
+2. Type `/` followed by the prompt prefix (e.g. `/feat`, `/dbg`, `/arch`).
+3. Press **Enter** or **Tab** to instantly insert the template structure.
 
-*Example:* Type `/dbg` and press Enter to instantly get:
-```text
-ISSUE:
-
-EXPECTED:
-
-ACTUAL:
-
-LAST WORKING STATE:
-...
-```
-
-### Method 2: Command Palette
-1. Press `Cmd+Shift+P` (macOS) or `Ctrl+Shift+P` (Windows/Linux).
-2. Type `Flint:` and select your command.
+#### 💡 Keyboard Shortcuts:
+* **Trigger Suggestions Manually**: Press `Ctrl+Space` if the dropdown does not pop up automatically.
+* **Navigate Templates**: Use the Up and Down arrow keys to view prompt documentation in the autocomplete hover card.
 
 ---
 
-## 📝 Available Prompts
+## 🔧 Installation Methods
 
-| Prefix | Name | Purpose |
+### For Visual Studio Code
+* **Search in UI**: Open the Extensions sidebar (`Cmd+Shift+X`), search for **`Flint Prompts`**, and click **Install**.
+* **Via Terminal Command**:
+  ```bash
+  code --install-extension kamalpulaparthi.promptspec
+  ```
+
+### For Antigravity IDE
+* **Search in UI**: Open the Extensions sidebar inside Antigravity IDE, search for **`Flint Prompts`**, and click **Install**.
+* **Via Terminal Command**:
+  ```bash
+  "/Applications/Antigravity IDE.app/Contents/Resources/app/bin/antigravity-ide" --install-extension kamalpulaparthi.promptspec
+  ```
+
+---
+
+## 📝 Available Prompts & Skeletons
+
+| Slash Trigger | Template Name | Heading Skeleton Inserted |
 |---|---|---|
-| `/ai` | General AI | Standard input/output/constraints formula |
-| `/dbg` | Debugging | Isolate issues, actual vs expected, error logs |
-| `/feat` | Feature Dev | Define goal, stack, architecture, edge cases |
-| `/review` | Code Review | Audit for scalability, complexity, and bugs |
-| `/arch` | Architecture | System goals, trade-offs, and design benefits |
-| `/api` | API Design | Endpoint, method, request/response, validation |
-| `/refactor` | Refactoring | Target debt and plan specific code improvements |
-| `/sec` | Security Review | OWASP Top 10, auth, injection risk check |
-| `/perf` | Optimization | Latency target, metrics, and bottlenecks |
-| `/agent` | AI Agent | Role, tools, decision rules, failure cases |
-| `/learn` | Learning | Target topic, knowledge gaps, application |
-| `/decision` | Decision-Making | Facts, risks, second-order effects |
-| `/rca` | Root Cause | Symptom tracking and fix hypotheses |
-| `/sys` | System Design | Traffic, databases, load balancing, caching |
-| `/research` | Research | Hypotheses, unknowns, and risk assessment |
-| `/improve` | Prompt Tuning | Audit existing prompts for better output |
-| `/biz` | Business Logic | Target user flow, rules, failure scenarios |
-| `/ui` | UI / UX | Design constraints and structural layouts |
-| `/deploy` | Deployment | Environment debugging, logs, variables |
-| `/context` | Context Eng. | File reference rules and expected AI behavior |
-
----
-
-## 🔧 Installation
-
-**From VS Code Extensions sidebar:**
-Search for **`Flint Prompts`** and click **Install**.
-
-**From CLI:**
-```bash
-code --install-extension kamalpulaparthi.promptspec
-```
+| `/ai` | General AI | Goal, Context, Constraints, Input, Expected Output |
+| `/dbg` | Debugging | Issue, Expected, Actual, Last Working, Hypotheses, Affected Files, Logs, Tested |
+| `/feat` | Feature Dev | Goal, Stack, Current Architecture, Constraints, Inputs, Edge Cases, Expected Output |
+| `/review` | Code Review | Review checklist: bugs, security, scalability, maintainability, edge cases, complexity |
+| `/arch` | Architecture | System Goal, Limitations, Proposed Arch, Scalability, Security, Trade-offs, Benefits |
+| `/api` | API Design | Goal, Endpoint, Method, Request Body, Expected Response, Validation, Auth, Error Cases |
+| `/refactor` | Refactoring | Goal, Current Problems, Technical Debt, Constraints, Files Involved, Expected Improvements |
+| `/sec` | Security Review | Security audit: auth, authorization, injection, exposure, config, validation, rate limits |
+| `/perf` | Optimization | Goal, Current Bottleneck, Metrics, Affected Modules, Hypotheses, Targets, Improvements |
+| `/agent` | AI Agent | Agent Role, Primary Objective, Tools, Constraints, Decision Rules, Failures, Success Criteria |
+| `/learn` | Learning | Topic, Current Understanding, Knowledge Gaps, Real-World Apps, Exercises, Outcomes |
+| `/decision` | Decision-Making | Decision, Options, Known Facts, Assumptions, Risks, Second-Order Effects, Recommendation |
+| `/rca` | Root Cause | Problem, Start Time, What Changed, Observed Symptoms, Possible Causes, Fix Plan |
+| `/sys` | System Design | Requirements, Traffic, Database, API, Caching, Load Balancing, Failures, Scalability Plan |
+| `/research` | Research | Topic, Objective, Known Facts, Unknowns, Hypotheses, Risk of Assumptions, Expected Insights |
+| `/improve` | Prompt Tuning | Current Prompt, Current Problems, Desired Improvements, Missing Context, Target Quality |
+| `/biz` | Business Logic | Goal, User Flow, Business Rules, Edge Cases, Failure Scenarios, Data Requirements, Output |
+| `/ui` | UI / UX | Goal, Target Users, User Problems, Responsive Rules, A11y Rules, Design Constraints, Structure |
+| `/deploy` | Deployment | Environment, Deployment Target, Error, Last Success, Infrastructure, Logs, Tested |
+| `/context` | Context Eng. | Project Type, Persistent Context Files, Temporary Context, Constraints, Reusable Patterns |
 
 ---
 
 ## 🛡️ Design Principles
 
-* **Fully Offline**: Works without network calls, external APIs, or AI keys.
-* **No Webviews**: Native VS Code editor API for maximum speed and zero memory overhead.
+* **Fully Offline**: 100% offline, zero network requests, no AI API keys required.
+* **Extremely Lightweight**: Built purely on the native VS Code Completion and Snippet APIs (no memory-heavy webviews).
 
 ---
+
+## 📜 Changelog
+
+See the full changelog in the [CHANGELOG.md](file:///Users/kamalpulaparthi/Documents/projects/shippingProducts/ship-001/CHANGELOG.md) file.
 
 ## License
 
 MIT
-
