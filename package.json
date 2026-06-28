@@ -59,6 +59,7 @@
     "functional-test": "node test.js",
     "ship": "npm run compile && npm run compile-tests && npm run functional-test && npm run publish",
     "package:vsix": "npx @vscode/vsce package --no-dependencies --allow-missing-repository",
+    "install:ide": "npm run package:vsix && \"/Applications/Antigravity IDE.app/Contents/Resources/app/bin/antigravity-ide\" --install-extension promptspec-*.vsix",
     "publish": "npx @vscode/vsce publish --no-dependencies --allow-missing-repository"
   },
   "devDependencies": {

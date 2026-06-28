@@ -19,6 +19,20 @@ That's it. This command compiles, tests, and publishes in one shot.
 
 ---
 
+## Installing & Testing in Antigravity IDE (Local Development)
+
+If you want to package and test the extension directly in the **Antigravity IDE** locally without waiting for the marketplace CDN:
+
+### Run this single command:
+```bash
+npm run install:ide
+```
+This packages the current code into a `.vsix` file and automatically installs it to the Antigravity IDE. 
+
+Once run, open or reload your Antigravity IDE window (`Cmd+Shift+P` -> `Reload Window`), and start typing `/feat` or `/dbg` in any file!
+
+---
+
 ## What `npm run ship` does internally
 1. `npm run compile` — type check + lint + build
 2. `npm run compile-tests` — compile test files
