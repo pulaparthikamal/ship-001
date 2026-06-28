@@ -1,70 +1,95 @@
-# Flint
+# Flint Prompts
 
-**Flint** is a lightweight VS Code extension that instantly inserts structured prompt templates into your editor — no AI, no API, no configuration required.
-
-Strike the flint. Get your template. Start writing.
+**Flint** instantly inserts structured, headings-only prompt templates into your editor. No fluff, no configuration, just fast prompt structures.
 
 ---
 
-## Installation
+## ⚡ The Problem & What Flint Solves
 
-**From Marketplace**
+### The Problem:
+* **Token Bloat**: Copied prompt templates are often loaded with verbose descriptions, instructions, and examples that waste your LLM's context window and increase token cost.
+* **Repetition**: Writing structured prompt sections (Goal, Constraints, Context, Output) manually every single time is slow.
 
-Search `Flint` in the VS Code Extensions sidebar, or:
+### What Flint Solves:
+* **Token Savings**: Inserts clean, minimal, headings-only structures. You only feed the AI what's actually relevant to your task.
+* **Context Preservation**: Keeps your LLM focused on your actual code/problem, not the template's guidelines.
+
+---
+
+## 🚀 How to Use (Simple & Fast)
+
+There are two correct ways to use Flint in **any file**:
+
+### Method 1: The Slash Command `/` (Recommended)
+1. Open any file in your editor (e.g. `notes.md`, `test.py`).
+2. Type `/` followed by the template prefix (e.g., `/feat` or `/dbg`).
+3. Press **Enter** or **Tab** to insert.
+
+*Example:* Type `/dbg` and press Enter to instantly get:
+```text
+ISSUE:
+
+EXPECTED:
+
+ACTUAL:
+
+LAST WORKING STATE:
+...
 ```
-ext install kamalpulaparthi.flint
+
+### Method 2: Command Palette
+1. Press `Cmd+Shift+P` (macOS) or `Ctrl+Shift+P` (Windows/Linux).
+2. Type `Flint:` and select your command.
+
+---
+
+## 📝 Available Prompts
+
+| Prefix | Name | Purpose |
+|---|---|---|
+| `/ai` | General AI | Standard input/output/constraints formula |
+| `/dbg` | Debugging | Isolate issues, actual vs expected, error logs |
+| `/feat` | Feature Dev | Define goal, stack, architecture, edge cases |
+| `/review` | Code Review | Audit for scalability, complexity, and bugs |
+| `/arch` | Architecture | System goals, trade-offs, and design benefits |
+| `/api` | API Design | Endpoint, method, request/response, validation |
+| `/refactor` | Refactoring | Target debt and plan specific code improvements |
+| `/sec` | Security Review | OWASP Top 10, auth, injection risk check |
+| `/perf` | Optimization | Latency target, metrics, and bottlenecks |
+| `/agent` | AI Agent | Role, tools, decision rules, failure cases |
+| `/learn` | Learning | Target topic, knowledge gaps, application |
+| `/decision` | Decision-Making | Facts, risks, second-order effects |
+| `/rca` | Root Cause | Symptom tracking and fix hypotheses |
+| `/sys` | System Design | Traffic, databases, load balancing, caching |
+| `/research` | Research | Hypotheses, unknowns, and risk assessment |
+| `/improve` | Prompt Tuning | Audit existing prompts for better output |
+| `/biz` | Business Logic | Target user flow, rules, failure scenarios |
+| `/ui` | UI / UX | Design constraints and structural layouts |
+| `/deploy` | Deployment | Environment debugging, logs, variables |
+| `/context` | Context Eng. | File reference rules and expected AI behavior |
+
+---
+
+## 🔧 Installation
+
+**From VS Code Extensions sidebar:**
+Search for **`Flint Prompts`** and click **Install**.
+
+**From CLI:**
+```bash
+code --install-extension kamalpulaparthi.promptspec
 ```
 
-**From VSIX (local)**
-
-1. Download `flint-0.0.3.vsix`
-2. `Cmd+Shift+P` → `Extensions: Install from VSIX...`
-3. Select the file → Reload
-
 ---
 
-## Commands
+## 🛡️ Design Principles
 
-Open the Command Palette (`Cmd+Shift+P`) and type `Flint`:
-
-| Command | Description |
-|---|---|
-| `Flint: Feature` | Insert a structured Feature prompt template |
-| `Flint: Bug Fix` | Insert a structured Bug Fix prompt template |
-| `Flint: Code Review` | Insert a structured Code Review prompt template |
-| `Flint: Refactor` | Insert a structured Refactor prompt template |
-| `Flint: Optimize` | Insert a structured Optimize prompt template |
-| `Flint: Security Review` | Insert a structured Security Review prompt template |
-
----
-
-## Usage
-
-1. Open any file (`.md`, `.txt`, or code file)
-2. Place cursor where you want the template
-3. `Cmd+Shift+P` → run a `Flint: ...` command
-4. Template inserts at cursor — fill in the sections
-
----
-
-## Design Principles
-
-- **No AI** — pure template insertion, zero network calls
-- **No API** — works fully offline
-- **No webviews** — native VS Code editor API only
-- **No settings UI** — install and use immediately
-
----
-
-## Roadmap
-
-- [ ] Custom templates via `settings.json`
-- [ ] Snippet variable support (`${TM_FILENAME}`, etc.)
-- [ ] More templates: Test, Architecture, Documentation
-- [ ] Multi-cursor insertion
+* **Fully Offline**: Works without network calls, external APIs, or AI keys.
+* **No Webviews**: Native VS Code editor API for maximum speed and zero memory overhead.
 
 ---
 
 ## License
 
 MIT
+
