@@ -2,6 +2,15 @@
 
 **Flint** instantly inserts structured, headings-only prompt templates into your editor. No fluff, no token bloat, just lightning-fast prompt structures.
 
+
+---
+
+## 🎥 Video Tutorial
+
+Watch how to use Flint Prompts:
+
+![Flint Prompts Demo Video](https://github.com/pulaparthikamal/ship-001/raw/main/images/tutorial.mov)
+
 ---
 
 ## ⚡ The Problem & What Flint Solves

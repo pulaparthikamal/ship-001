@@ -2,7 +2,7 @@
   "name": "promptspec",
   "displayName": "Flint Prompts",
   "description": "Instantly insert structured prompt templates in any file — type a prefix and get your template.",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "publisher": "kamalpulaparthi",
   "icon": "images/icon.png",
   "engines": {

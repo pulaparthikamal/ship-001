@@ -4,6 +4,10 @@ All notable changes to the "promptspec" extension will be documented in this fil
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.9] - 2026-06-28
+### Added
+- Embedded a 🎥 demo and tutorial video inside the README.md documentation.
+
 ## [0.0.8] - 2026-06-28
 ### Changed
 - Formatted and cleaned up package.json layout.
