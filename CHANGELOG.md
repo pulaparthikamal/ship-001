@@ -4,6 +4,14 @@ All notable changes to the "promptspec" extension will be documented in this fil
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.8] - 2026-06-28
+### Changed
+- Formatted and cleaned up package.json layout.
+
+## [0.0.7] - 2026-06-28
+### Added
+- Expanded documentation in README with detailed shortcuts and installation paths for both VS Code and Antigravity IDE.
+
 ## [0.0.6] - 2026-06-28
 ### Changed
 - Clarified documentation around problem statement, token consumption, and slash command usage.

@@ -2,7 +2,7 @@
   "name": "promptspec",
   "displayName": "Flint Prompts",
   "description": "Instantly insert structured prompt templates in any file — type a prefix and get your template.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publisher": "kamalpulaparthi",
   "icon": "images/icon.png",
   "engines": {
@@ -12,35 +12,103 @@
     "Snippets",
     "Other"
   ],
-  "keywords": ["prompt", "templates", "ai", "snippets", "flint"],
+  "keywords": [
+    "prompt",
+    "templates",
+    "ai",
+    "snippets",
+    "flint"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/kamalpulaparthi/promptspec"
   },
-  "activationEvents": ["onStartupFinished"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
-      { "command": "flint.ai",       "title": "Flint: General AI Prompt" },
-      { "command": "flint.dbg",      "title": "Flint: Debug" },
-      { "command": "flint.feat",     "title": "Flint: Feature" },
-      { "command": "flint.review",   "title": "Flint: Code Review" },
-      { "command": "flint.arch",     "title": "Flint: Architecture" },
-      { "command": "flint.api",      "title": "Flint: API Design" },
-      { "command": "flint.refactor", "title": "Flint: Refactor" },
-      { "command": "flint.sec",      "title": "Flint: Security Review" },
-      { "command": "flint.perf",     "title": "Flint: Performance" },
-      { "command": "flint.agent",    "title": "Flint: AI Agent" },
-      { "command": "flint.learn",    "title": "Flint: Learning" },
-      { "command": "flint.decision", "title": "Flint: Decision" },
-      { "command": "flint.rca",      "title": "Flint: Root Cause Analysis" },
-      { "command": "flint.sys",      "title": "Flint: System Design" },
-      { "command": "flint.research", "title": "Flint: Research" },
-      { "command": "flint.improve",  "title": "Flint: Improve Prompt" },
-      { "command": "flint.biz",      "title": "Flint: Business Logic" },
-      { "command": "flint.ui",       "title": "Flint: UI/UX" },
-      { "command": "flint.deploy",   "title": "Flint: Deployment Debug" },
-      { "command": "flint.context",  "title": "Flint: Context Engineering" }
+      {
+        "command": "flint.ai",
+        "title": "Flint: General AI Prompt"
+      },
+      {
+        "command": "flint.dbg",
+        "title": "Flint: Debug"
+      },
+      {
+        "command": "flint.feat",
+        "title": "Flint: Feature"
+      },
+      {
+        "command": "flint.review",
+        "title": "Flint: Code Review"
+      },
+      {
+        "command": "flint.arch",
+        "title": "Flint: Architecture"
+      },
+      {
+        "command": "flint.api",
+        "title": "Flint: API Design"
+      },
+      {
+        "command": "flint.refactor",
+        "title": "Flint: Refactor"
+      },
+      {
+        "command": "flint.sec",
+        "title": "Flint: Security Review"
+      },
+      {
+        "command": "flint.perf",
+        "title": "Flint: Performance"
+      },
+      {
+        "command": "flint.agent",
+        "title": "Flint: AI Agent"
+      },
+      {
+        "command": "flint.learn",
+        "title": "Flint: Learning"
+      },
+      {
+        "command": "flint.decision",
+        "title": "Flint: Decision"
+      },
+      {
+        "command": "flint.rca",
+        "title": "Flint: Root Cause Analysis"
+      },
+      {
+        "command": "flint.sys",
+        "title": "Flint: System Design"
+      },
+      {
+        "command": "flint.research",
+        "title": "Flint: Research"
+      },
+      {
+        "command": "flint.improve",
+        "title": "Flint: Improve Prompt"
+      },
+      {
+        "command": "flint.biz",
+        "title": "Flint: Business Logic"
+      },
+      {
+        "command": "flint.ui",
+        "title": "Flint: UI/UX"
+      },
+      {
+        "command": "flint.deploy",
+        "title": "Flint: Deployment Debug"
+      },
+      {
+        "command": "flint.context",
+        "title": "Flint: Context Engineering"
+      }
     ]
   },
   "scripts": {
